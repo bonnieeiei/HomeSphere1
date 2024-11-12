@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeSphere1.Home"
+             Title="Home">
+    <Grid>
+        <!-- Image Background -->
+        <Image Source="Images/home.png" 
+               Aspect="AspectFill" 
+               Opacity="1"
+               Margin="0"/>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button
+                x:Name="ParcelrBtn"
+                Text="PARCEL"
+                TextColor="Black"
+                FontSize="60"                   
+                Clicked="OnParcelClicked"
+                HorizontalOptions="Center" 
+                VerticalOptions="Start"
+                WidthRequest="360"
+                HeightRequest="100" 
+                Margin="30,250,30,0"
+                BackgroundColor="#FFF0D7"/>
+            <Button
+                x:Name="RepairrBtn"
+                Text="REPAIR"
+                TextColor="Black"
+                FontSize="60"
+                Clicked="OnRepairClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                WidthRequest="360"
+                HeightRequest="100" 
+                Margin="30,30,30,0"
+                BackgroundColor="#FFF0D7"/>
+        </VerticalStackLayout>
+    </ScrollView>
+    </Grid>
+</ContentPage>

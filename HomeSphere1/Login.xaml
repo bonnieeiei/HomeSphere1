@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeSphere1.Login">
+    <Grid>
+        <!-- Image Background -->
+        <Image Source="Images/home.png" 
+               Aspect="AspectFill" 
+               Opacity="1"
+               Margin="0"/>
+
+        <ScrollView>
+            <VerticalStackLayout>
+                <Label  Margin="20,250,20,0"
+                        Text="Username" 
+                        FontSize="18"
+                        VerticalOptions="Center"/>
+                <Entry  x:name="UsernameEntry"
+                        Placeholder="Enter your username"
+                        VerticalOptions="Center"
+                        Margin="20,0,0,20"/>
+                    
+                <Label  Margin="20,20,20,0"
+                        Text="Password" 
+                        FontSize="18"
+                        VerticalOptions="Center"/>
+                <Entry  x:name="PasswordEntry"
+                        Placeholder="Enter your password"
+                        Keyboard="Numeric"
+                        VerticalOptions="Center"
+                        Margin="20,0,0,20"/>
+
+                <Button
+                    x:Name="LoginrBtn"
+                    Text="Log In" 
+                    TextColor="White"
+                    FontSize="25"
+                    Clicked="OnLoginClicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    WidthRequest="156"
+                    HeightRequest="55" 
+                    Margin="0,50,15,0"
+                    BackgroundColor="#5EC8AF"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

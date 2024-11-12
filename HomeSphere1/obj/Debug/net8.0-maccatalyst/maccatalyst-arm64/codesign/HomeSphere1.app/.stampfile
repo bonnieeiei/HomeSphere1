@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/arisarapathomthanasarn/Project/HomeSphere1/HomeSphere1/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/arisarapathomthanasarn/Project/HomeSphere1/HomeSphere1/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/HomeSphere1.app

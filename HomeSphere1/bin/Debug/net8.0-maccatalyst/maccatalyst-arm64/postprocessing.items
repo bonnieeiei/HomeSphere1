@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="HomeSphere1.app/Contents/MacOS/HomeSphere1">
+      <IsAppExtension>false</IsAppExtension>
+      <BCSymbolMapName>HomeSphere1.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>HomeSphere1.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/arisarapathomthanasarn/Project/HomeSphere1/HomeSphere1/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/mtouch-symbols.list</SymbolFile>
+      <DSymName>HomeSphere1.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/arisarapathomthanasarn/Project/HomeSphere1/HomeSphere1</SourceProjectPath>
+      <IsXPCService></IsXPCService>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>
