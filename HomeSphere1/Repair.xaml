@@ -10,10 +10,51 @@
                Opacity="1"
                Margin="0"/>
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label  Margin="20,200,20,0"
+                Text="Room Number" 
+                FontSize="18"
+                VerticalOptions="Center"/>
+        <Entry  Text="{Binding CurrentRepair.RoomNo}"
+                Placeholder="Enter your room number."
+                VerticalOptions="Center"
+                Margin="20,5,20,0"/>
+
+        <Label  Margin="20,10,20,0"
+                Text="Choose an option" 
+                FontSize="18"
+                VerticalOptions="Center"/>
+        <Picker SelectedItem ="{Binding CurrentRepair.Option}"
+                Title="options"
+                HorizontalOptions="Center"
+                WidthRequest="375">
+            <Picker.ItemsSource Margin="20,5,20,0">
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Closet</x:String>
+                    <x:String>Door</x:String>
+                    <x:String>Air Conditioner</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        
+        <Label  Margin="20,10,20,0"
+                Text="Detail" 
+                FontSize="18"
+                VerticalOptions="Center"/>
+        <Entry  Text="{Binding CurrentRepair.Detail}"
+                Placeholder="Enter your detail."
+                VerticalOptions="Center"
+                Margin="20,5,20,0"/>
+        
+        <Label  Margin="20,10,20,0"
+                Text="DatePicker" />
+        <DatePicker Date="{Binding CurrentRepair.DatePicker}"
+                    WidthRequest="375"
+                    HeightRequest="40"
+                    HorizontalOptions="Center"/>
+
+        <Button Text="Done" 
+                WidthRequest="375"
+                Command="{Binding Done}"/>
     </VerticalStackLayout>
     </Grid>
 </ContentPage>

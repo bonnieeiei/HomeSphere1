@@ -9,11 +9,38 @@
                Aspect="AspectFill" 
                Opacity="1"
                Margin="0"/>
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <VerticalStackLayout Grid.Row="0" Padding="20">
+            <Label Text="Parcel"></Label>
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="5" >
+                <Button Grid.Column="0" Text="All"
+                        Command="{Binding All }"></Button>
+                <Button Grid.Column="1" Text="Waiting to Confirm"
+                        Command="{Binding WaitingCommand }"></Button>
+                <Button Grid.Column="2" Text="Confirm"
+                        Command="{Binding ConfirmCommand }"></Button>
+            </Grid>
+        </VerticalStackLayout>
+        
+        <ScrollView Padding="20" Grid.Row="1">
+            <CollectionView  ItemsSource="{Binding Users}"
+                             SelectionMode="Single"
+                             SelectedItem="{Binding CurrentUser}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+
+                            <Grid ColumnDefinitions="*,*,*">
+                                <Label Grid.Column="0"
+                                       Text="{Binding RoomNo}"></Label>
+                                <Label Grid.Column="1"
+                                       Text="{Binding Date}"></Label>
+                                <Label Grid.Column="2"
+                                       Text="{Binding ParcelNo}"></Label>
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
     </Grid>
 </ContentPage>
