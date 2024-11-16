@@ -11,10 +11,10 @@ public class FirestoreServiceP
 
     public FirestoreServiceP()
     {
-        this.SetupFireStoreP();
+        this.SetupFireStore();
     }
 
-    private async Task SetupFireStoreP()
+    private async Task SetupFireStore()
     {
         if (db == null)
         {
@@ -35,7 +35,7 @@ public class FirestoreServiceP
     {
         try
         {
-            await SetupFireStoreP();
+            await SetupFireStore();
             var data = await db.Collection("Parcels").GetSnapshotAsync();
             var parcels = data.Documents.Select(doc =>
             {
@@ -59,7 +59,7 @@ public class FirestoreServiceP
     {
         try
         {
-            await SetupFireStoreP();
+            await SetupFireStore();
             var parcelData = new Dictionary<string, object>
             {
                 { "RoomNo", parcel.RoomNo },
@@ -81,7 +81,7 @@ public class FirestoreServiceP
     {
         try
         {
-            await SetupFireStoreP();
+            await SetupFireStore();
 
             // Manually create a dictionary for the updated data
             var parcelData = new Dictionary<string, object>

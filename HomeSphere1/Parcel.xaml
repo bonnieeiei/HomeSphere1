@@ -14,7 +14,7 @@
             <Grid ColumnDefinitions="*,*,*" ColumnSpacing="5" >
                 <Button Grid.Column="0" Text="All"
                         Command="{Binding All }"></Button>
-                <Button Grid.Column="1" Text="Waiting to Confirm"
+                <Button Grid.Column="1" Text="Waiting"
                         Command="{Binding WaitingCommand }"></Button>
                 <Button Grid.Column="2" Text="Confirm"
                         Command="{Binding ConfirmCommand }"></Button>
